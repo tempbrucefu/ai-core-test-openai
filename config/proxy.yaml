@@ -39,7 +39,7 @@ spec:
         maxReplicas: 1    # how much to scale
         containers:
         - name: kserve-container
-          image: "docker.io/{{inputs.parameters.DOCKER_NAMESPACE}}/azure-openai-proxy"
+          image: "docker.io/{{inputs.parameters.DOCKER_NAMESPACE}}"
           ports:
             - containerPort: 9001    # customizable port
               protocol: TCP
