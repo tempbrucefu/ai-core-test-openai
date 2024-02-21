@@ -53,5 +53,5 @@ spec:
             - name: OPENAI_API_KEY # name of the environment variable inside Docker container
               value: "{{inputs.parameters.OPENAI_API_KEY}}"
           envFrom:
-            - secretRef:
-              mame: vcap
+          - secretRef:
+              name: vcap
