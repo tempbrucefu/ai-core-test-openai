@@ -9,7 +9,7 @@ metadata:
     executables.ai.sap.com/name: "ai-core-test-openai" # Executable name should describe the workflow in the use case
   labels:
     scenarios.ai.sap.com/id: "ai-core-test-openai"
-    ai.sap.com/version: "1.1"
+    ai.sap.com/version: "1.2"
     ext.ai.sap.com/islm_released_version: "true"
     ext.ai.sap.com/islm_executable_type: "inference"
     ext.ai.sap.com/islm_inference_type: "online"
