@@ -36,3 +36,7 @@ def predict_chat_completion():
         return jsonify({"error": "Malformed Payload"})
     except Exception as e:
         return jsonify({"error": str(e)})
+    
+@app.route("/v2/vcap", method=["GET"])
+def get_vcap():
+    return testVcap
