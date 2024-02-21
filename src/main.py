@@ -12,15 +12,6 @@ try:
 except Exception as e:
     app.logger.info(f"vcap error {e}")
 
-testVcap2 = os.getenv("vcap","not setting")
-try:
-    import json
-    print(f"vcap = {testVcap2}")
-    testVcap2Obj = json.loads(str(testVcap2))
-    print(f"vcap = {testVcap2Obj}")
-except Exception as e:
-    print(f"vcap error {e}")
-
 @app.route("/v2/completion", methods=["POST"])
 def predict_completion():
     try:
@@ -51,6 +42,14 @@ def predict_chat_completion():
 @app.route("/v2/vcap", methods=["GET"])
 def get_vcap():
     try:
+        testVcap2 = os.getenv("vcap","not setting")
+        try:
+            import json
+            print(f"vcap = {testVcap2}")
+            testVcap2Obj = json.loads(str(testVcap2))
+            print(f"vcap = {testVcap2Obj}")
+        except Exception as e:
+            print(f"vcap error {e}")
         return jsonify({"error": str(testVcap2Obj)})
     except Exception as e:
         return jsonify({"error": str(e)})
